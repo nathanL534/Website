@@ -1,6 +1,5 @@
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { BorderBeam } from "@/components/ui/border-beam";
-import { NumberTicker } from "../ui/number-ticker";
 import { NeonGradientCard } from "../magicui/neon-gradient-card";
 import { Reveal } from "../magicui/reveal";
 
