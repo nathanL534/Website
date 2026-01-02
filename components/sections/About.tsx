@@ -1,48 +1,40 @@
 import { TypingAnimation } from "@/components/ui/typing-animation";
-import { BorderBeam } from "@/components/ui/border-beam";
-import { NeonGradientCard } from "../magicui/neon-gradient-card";
 import { Reveal } from "../magicui/reveal";
 
 export default function About() {
   return (
     <Reveal>
-    <section id="about" className="container mx-auto px-4 md:px-8 py-16 md:py-24 bg-gradient-to-b from-white to-gray-50/30 dark:from-zinc-900 dark:to-zinc-800">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="about" className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+      <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-violet-600 to-sky-600 bg-clip-text text-transparent">
-              About Me
-            </span>
+        <div className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            About Me
           </h2>
-          <p className="text-base md:text-lg leading-relaxed text-zinc-700 dark:text-zinc-300 max-w-2xl mx-auto mt-6">
+          <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400">
             Get to know the person behind the code
           </p>
         </div>
 
-
-        <NeonGradientCard>
         {/* Main Card */}
-        <div className="relative backdrop-blur-xl bg-white/90 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-3xl shadow-2xl p-8 md:p-12 transition hover:shadow-3xl">
-          <BorderBeam size={600} duration={15} delay={0} />
-          
-          <div className="space-y-8">
+        <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl shadow-sm p-6 md:p-8">
+          <div className="space-y-6">
             {/* Greeting */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-semibold text-zinc-600 dark:text-zinc-300 mb-4">
+              <h3 className="text-lg md:text-xl text-zinc-600 dark:text-zinc-300 mb-2">
                 Hi, I&apos;m
               </h3>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-violet-600 to-sky-600 bg-clip-text text-transparent tracking-tight mb-6">
+              <h1 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4">
                 Nathan
               </h1>
             </div>
 
             {/* Typing Animation */}
-            <div className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-300">
+            <div className="text-lg md:text-xl text-zinc-700 dark:text-zinc-300">
               <TypingAnimation
                 words={[
                   "I build things for the web",
-                  "I love clean, efficient code", 
+                  "I love clean, efficient code",
                   "I create amazing user experiences",
                   "I'm passionate about modern web tech"
                 ]}
@@ -51,35 +43,32 @@ export default function About() {
             </div>
 
             {/* Description */}
-            <p className="text-base md:text-lg leading-relaxed text-zinc-700 dark:text-zinc-300 max-w-3xl mx-auto">
-              I&apos;m a software engineer with a background in Computer Science who specializes in building 
-              exceptional digital experiences. Currently focused on creating accessible, human-centered products 
-              using modern web technologies. When I&apos;m not coding, you&apos;ll find me exploring new frameworks 
+            <p className="text-sm md:text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+              I&apos;m a software engineer with a background in Computer Science who specializes in building
+              exceptional digital experiences. Currently focused on creating accessible, human-centered products
+              using modern web technologies. When I&apos;m not coding, you&apos;ll find me exploring new frameworks
               or contributing to open source projects.
             </p>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              <div className="rounded-2xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-md p-6">
-                <div className="text-3xl font-bold bg-gradient-to-r from-violet-500 to-sky-500 bg-clip-text text-transparent mb-2">5+</div>
-                <div className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Years Experience</div>
+            <div className="grid grid-cols-3 gap-4 pt-4">
+              <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-700">
+                <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">5+</div>
+                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Years Experience</div>
               </div>
-              <div className="rounded-2xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-md p-6">
-                <div className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-2">24+</div>
-                <div className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Projects Built</div>
+              <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-700">
+                <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">24+</div>
+                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Projects Built</div>
               </div>
-              <div className="rounded-2xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-md p-6">
-                <div className="text-3xl font-bold bg-gradient-to-r from-violet-500 to-sky-500 bg-clip-text text-transparent mb-2">8+</div>
-                <div className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Open Source</div>
+              <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-700">
+                <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">8+</div>
+                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Open Source</div>
               </div>
             </div>
           </div>
         </div>
-        </NeonGradientCard>
       </div>
     </section>
     </Reveal>
   );
 }
-
-
