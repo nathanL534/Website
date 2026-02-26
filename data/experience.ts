@@ -44,6 +44,5 @@ export const experience: ExperienceItem[] = [
       "Built reusable UI components for navigation, tabs, and settings pages using Sass/CSS with a strong focus on consistency.",
       "Collaborated with product and design to refine interaction details, improve discoverability, and reduce user friction."
     ]
-  },
   }
 ];

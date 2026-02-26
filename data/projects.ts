@@ -19,14 +19,6 @@ export const projects: Project[] = [
     github: "https://github.com/nathanL534/rag_system"
   },
   {
-    slug: "voice-interview-ai",
-    name: "Voice Interview AI Chatbot",
-    description: "AI-powered interview simulator with real-time voice feedback using OpenAI and ElevenLabs. Provides instant analysis of responses and coaching tips.",
-    tech: ["Next.js", "OpenAI API", "ElevenLabs", "Supabase", "Real-time AI"],
-    image: "/project-voice-ai.jpg",
-    github: "https://github.com/yourusername/voice-interview-ai"
-  },
-  {
     slug: "neural-net-scratch",
     name: "Neural Net from Scratch",
     description: "Java-based Multi-Layer Perceptron implementation with forward/backpropagation, gradient descent, and custom training algorithms.",
@@ -49,6 +41,14 @@ export const projects: Project[] = [
     tech: ["FastAPI", "Alpaca API", "Slack API", "Trading Algorithms", "Quantitative Models"],
     image: "/project-trading.jpg",
     github: "https://github.com/nathanL534/slack_bot"
+  },
+  {
+    slug: "voice-interview-ai",
+    name: "Voice Interview AI Chatbot",
+    description: "AI-powered interview simulator with real-time voice feedback using OpenAI and ElevenLabs. Provides instant analysis of responses and coaching tips.",
+    tech: ["Next.js", "OpenAI API", "ElevenLabs", "Supabase", "Real-time AI"],
+    image: "/project-voice-ai.jpg",
+    github: "https://github.com/nathanL534/superprep"
   },
   {
     slug: "portfolio",

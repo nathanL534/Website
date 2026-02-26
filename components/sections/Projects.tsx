@@ -70,7 +70,7 @@ export default function Projects() {
                       </svg>
                     </Link>
                   )}
-                  {p.github && (
+                  {p.github && p.slug !== "voice-interview-ai" && (
                     <Link
                       href={p.github}
                       className="inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
