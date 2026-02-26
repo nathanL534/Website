@@ -4,13 +4,11 @@ import {
   SiNextdotjs, 
   SiNodedotjs, 
   SiTailwindcss, 
-  SiPostgresql, 
   SiGit, 
   SiAmazonwebservices,
   SiMongodb,
   SiDocker,
   SiVercel,
-  SiFirebase,
   SiPython,
   SiJavascript
 } from "react-icons/si";
@@ -27,13 +25,11 @@ export const skills: Skill[] = [
   { name: "Next.js", Icon: SiNextdotjs },
   { name: "Node.js", Icon: SiNodedotjs },
   { name: "Tailwind", Icon: SiTailwindcss },
-  { name: "PostgreSQL", Icon: SiPostgresql },
   { name: "MongoDB", Icon: SiMongodb },
   { name: "Git", Icon: SiGit },
   { name: "AWS", Icon: SiAmazonwebservices },
   { name: "Docker", Icon: SiDocker },
   { name: "Vercel", Icon: SiVercel },
-  { name: "Firebase", Icon: SiFirebase },
   { name: "Python", Icon: SiPython },
   { name: "JavaScript", Icon: SiJavascript },
 ];
