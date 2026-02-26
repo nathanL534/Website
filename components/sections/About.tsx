@@ -33,10 +33,10 @@ export default function About() {
             <div className="text-lg md:text-xl text-zinc-700 dark:text-zinc-300">
               <TypingAnimation
                 words={[
-                  "I build things for the web",
-                  "I love clean, efficient code",
-                  "I create amazing user experiences",
-                  "I'm passionate about modern web tech"
+                  "I build agentic systems and full-stack products",
+                  "I turn messy workflows into reliable automation",
+                  "I ship fast, iterate hard, and obsess over UX",
+                  "I like code that feels clear and human"
                 ]}
                 className="font-medium"
               />
@@ -44,10 +44,12 @@ export default function About() {
 
             {/* Description */}
             <p className="text-sm md:text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              I&apos;m a software engineer with a background in Computer Science who specializes in building
-              exceptional digital experiences. Currently focused on creating accessible, human-centered products
-              using modern web technologies. When I&apos;m not coding, you&apos;ll find me exploring new frameworks
-              or contributing to open source projects.
+              I&apos;m a Computer Science and Statistics student at UChicago who loves building practical AI systems.
+              Lately I&apos;ve been especially interested in agentic workflows, like orchestrating autonomous workers,
+              model-driven task routing, and end-to-end RAG pipelines that actually hold up in production. I still care
+              deeply about strong frontend polish too, because the best technical systems should feel simple for real people.
+              Outside of coding, I&apos;m usually swimming, exploring Chicago coffee spots, or running mini experiments on
+              whatever idea I&apos;m currently obsessed with.
             </p>
 
             {/* Stats Cards */}
@@ -58,11 +60,11 @@ export default function About() {
               </div>
               <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-700">
                 <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">24+</div>
-                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Projects Built</div>
+                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Systems Shipped</div>
               </div>
               <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-700">
-                <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">8+</div>
-                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Open Source</div>
+                <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">10+</div>
+                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Projects Built</div>
               </div>
             </div>
           </div>

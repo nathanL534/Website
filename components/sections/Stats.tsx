@@ -19,15 +19,15 @@ export default function Stats() {
               <NumberTicker value={24} />+
             </div>
             <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 font-medium">
-              Projects
+              Systems shipped
             </div>
           </div>
           <div className="rounded-xl px-4 py-6 bg-white dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-800 shadow-sm">
             <div className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">
-              <NumberTicker value={8} />+
+              <NumberTicker value={10} />+
             </div>
             <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 font-medium">
-              Open source
+              Projects built
             </div>
           </div>
         </div>
@@ -35,5 +35,4 @@ export default function Stats() {
     </section>
   );
 }
-
 
