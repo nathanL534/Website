@@ -17,6 +17,15 @@ export const experience: ExperienceItem[] = [
     ]
   },
   {
+    company: "UChicago APEX Labs",
+    role: "Research Assistant",
+    period: "December 2025 – Present",
+    highlights: [
+      "Improved OCR extraction quality with an automated two-pass correction and confidence-scoring pipeline, reaching 96.0% of 1,410 pages at cosine similarity >= 0.99 and 83.53% agreement across 45,838 reviewed errors.",
+      "Fine-tuned a style-transfer model from neutral-to-source text pairs, deployed Azure AI Search with semantic embeddings, and built grounded generation plus text-to-speech output for source-based responses."
+    ]
+  },
+  {
     company: "Renest Horizon",
     role: "Software Engineer Intern",
     period: "July 2025 – September 2025",
@@ -36,13 +45,5 @@ export const experience: ExperienceItem[] = [
       "Collaborated with product and design to refine interaction details, improve discoverability, and reduce user friction."
     ]
   },
-  {
-    company: "UChicago APEX Labs",
-    role: "Research Assistant",
-    period: "December 2025 – Present",
-    highlights: [
-      "Improved OCR extraction quality with an automated two-pass correction and confidence-scoring pipeline, reaching 96.0% of 1,410 pages at cosine similarity >= 0.99 and 83.53% agreement across 45,838 reviewed errors.",
-      "Fine-tuned a style-transfer model from neutral-to-source text pairs, deployed Azure AI Search with semantic embeddings, and built grounded generation plus text-to-speech output for source-based responses."
-    ]
   }
 ];

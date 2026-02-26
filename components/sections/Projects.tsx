@@ -36,17 +36,6 @@ export default function Projects() {
                   </span>
                 </div>
               )}
-              {/* Project Placeholder */}
-              <div className="aspect-video w-full rounded-lg overflow-hidden mb-4 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <div className="w-12 h-12 bg-zinc-300 dark:bg-zinc-700 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <svg className="w-6 h-6 text-zinc-600 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                  </div>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-500">Project Preview</p>
-                </div>
-              </div>
 
               <div className="space-y-3">
                 {/* Title */}

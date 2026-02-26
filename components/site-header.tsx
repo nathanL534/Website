@@ -12,7 +12,6 @@ export function SiteHeader() {
             <Link href="#projects" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Projects</Link>
             <Link href="#skills" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Skills</Link>
             <Link href="#experience" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Experience</Link>
-            <Link href="#resume" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Resume</Link>
             <Link href="#contact" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Contact</Link>
           </nav>
           <ThemeToggle />
@@ -22,5 +21,4 @@ export function SiteHeader() {
     </header>
   );
 }
-
 

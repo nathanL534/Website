@@ -56,6 +56,6 @@ export const projects: Project[] = [
     description: "Personal portfolio with animations and responsive design.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     image: "/project-portfolio.jpg",
-    github: "https://github.com/yourusername/portfolio"
+    github: "https://github.com/nathanL534/Website"
   },
 ];
