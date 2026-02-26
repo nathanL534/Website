@@ -1,4 +1,5 @@
 import { TypingAnimation } from "@/components/ui/typing-animation";
+import Image from "next/image";
 import { Reveal } from "../magicui/reveal";
 
 export default function About() {
@@ -42,15 +43,31 @@ export default function About() {
               />
             </div>
 
-            {/* Description */}
-            <p className="text-sm md:text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              I&apos;m a Computer Science and Statistics student at UChicago who loves building practical AI systems.
-              Lately I&apos;ve been especially interested in agentic workflows, like orchestrating autonomous workers,
-              model-driven task routing, and end-to-end RAG pipelines that actually hold up in production. I still care
-              deeply about strong frontend polish too, because the best technical systems should feel simple for real people.
-              Outside of coding, I&apos;m usually swimming, exploring Chicago coffee spots, or running mini experiments on
-              whatever idea I&apos;m currently obsessed with.
-            </p>
+            <div className="grid gap-6 lg:grid-cols-[1.7fr_1fr] items-start">
+              {/* Description */}
+              <p className="text-sm md:text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+                I&apos;m a Computer Science and Statistics student at UChicago who loves building practical AI systems.
+                Lately I&apos;ve been especially interested in agentic workflows, like orchestrating autonomous workers,
+                model-driven task routing, and end-to-end RAG pipelines that actually hold up in production. I still care
+                deeply about strong frontend polish too, because the best technical systems should feel simple for real people.
+                Outside of coding, I&apos;m into hiking, bouldering, surfing, swimming, hackathons, and the occasional
+                food challenge win.
+              </p>
+
+              {/* Personality Photo */}
+              <figure className="rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900">
+                <Image
+                  src="/food-challenge.jpeg"
+                  alt="Nathan holding a food challenge winner shirt"
+                  width={640}
+                  height={800}
+                  className="w-full h-auto object-cover"
+                />
+                <figcaption className="px-3 py-2 text-xs text-zinc-600 dark:text-zinc-400">
+                  Occasional food challenge win.
+                </figcaption>
+              </figure>
+            </div>
 
             {/* Stats Cards */}
             <div className="grid grid-cols-3 gap-4 pt-4">
