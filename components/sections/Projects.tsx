@@ -21,7 +21,21 @@ export default function Projects() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
-            <div key={p.slug} className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg shadow-sm hover:shadow-md transition-shadow p-5">
+            <div
+              key={p.slug}
+              className={`bg-white dark:bg-zinc-800 border rounded-lg shadow-sm hover:shadow-md transition-shadow p-5 ${
+                p.slug === "nathan-brain"
+                  ? "border-emerald-400 dark:border-emerald-500"
+                  : "border-zinc-200 dark:border-zinc-700"
+              }`}
+            >
+              {p.slug === "nathan-brain" && (
+                <div className="mb-3">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700">
+                    Currently Working On
+                  </span>
+                </div>
+              )}
               {/* Project Placeholder */}
               <div className="aspect-video w-full rounded-lg overflow-hidden mb-4 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center">
                 <div className="text-center p-4">

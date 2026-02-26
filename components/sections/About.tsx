@@ -59,8 +59,8 @@ export default function About() {
                 <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-700">
-                <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">24+</div>
-                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Systems Shipped</div>
+                <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">Agentic Systems</div>
+                <div className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Current Obsession</div>
               </div>
               <div className="text-center p-4 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-700">
                 <div className="text-2xl font-bold text-zinc-900 dark:text-white mb-1">10+</div>

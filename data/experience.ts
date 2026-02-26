@@ -37,14 +37,12 @@ export const experience: ExperienceItem[] = [
     ]
   },
   {
-    company: "University Research Lab",
+    company: "UChicago APEX Labs",
     role: "Research Assistant",
-    period: "2024 – 2025",
+    period: "December 2025 – Present",
     highlights: [
-      "Prototyped and evaluated data/ML workflows to support early-stage research experiments.",
-      "Built scripts and reproducible analysis pipelines to speed up iteration and improve result reliability.",
-      "Presented findings in weekly research discussions and translated technical outcomes into clear next steps."
+      "Improved OCR extraction quality with an automated two-pass correction and confidence-scoring pipeline, reaching 96.0% of 1,410 pages at cosine similarity >= 0.99 and 83.53% agreement across 45,838 reviewed errors.",
+      "Fine-tuned a style-transfer model from neutral-to-source text pairs, deployed Azure AI Search with semantic embeddings, and built grounded generation plus text-to-speech output for source-based responses."
     ]
   }
 ];
-
