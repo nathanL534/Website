@@ -30,7 +30,7 @@ export const experience: ExperienceItem[] = [
     role: "Software Engineer Intern",
     period: "July 2025 – September 2025",
     highlights: [
-      "Designed and deployed a Reddit finance intelligence agent using FastAPI, PRAW, and LLaMA models.",
+      "Designed and deployed a Reddit finance intelligence agent using FastAPI, PRAW, and LLaMA models, analyzing 2,500+ posts monthly.",
       "Implemented BFS-style comment traversal with heuristic scoring to surface high-signal personal finance discussions.",
       "Rebuilt key parts of the company web app with Next.js and AWS services to improve UX and deployment scalability."
     ]
