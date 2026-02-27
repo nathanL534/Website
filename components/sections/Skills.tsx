@@ -3,8 +3,8 @@ import { Reveal } from "../magicui/reveal";
 
 export default function Skills() {
   return (
-    <Reveal>
-    <section id="skills" className="container mx-auto h-full snap-start snap-always scroll-mt-16 px-4 py-12 md:px-6 md:py-16">
+    <Reveal className="min-h-full snap-start snap-always">
+    <section id="skills" className="container mx-auto scroll-mt-16 px-4 py-8 md:px-6 md:py-10">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-8">

@@ -24,10 +24,11 @@ type Direction = {
 
 export default function Landing() {
   const frameRef = useRef<HTMLDivElement | null>(null);
+  const hasSpawnedRef = useRef(false);
   const [sceneWidth, setSceneWidth] = useState(1200);
   const [sceneHeight, setSceneHeight] = useState(740);
-  const [pandaX, setPandaX] = useState(120);
-  const [pandaY, setPandaY] = useState(16);
+  const [pandaX, setPandaX] = useState(0);
+  const [pandaY, setPandaY] = useState(0);
   const [pandaRolling, setPandaRolling] = useState(false);
   const [pandaScale, setPandaScale] = useState(1);
   const [trailDots, setTrailDots] = useState<TrailDot[]>([]);
@@ -38,9 +39,9 @@ export default function Landing() {
 
   const gridSize = 28;
 
-  const directionRef = useRef<Direction>({ x: 1, y: 0 });
-  const xRef = useRef(120);
-  const yRef = useRef(16);
+  const directionRef = useRef<Direction>({ x: -1, y: 0 });
+  const xRef = useRef(0);
+  const yRef = useRef(0);
   const lastFrameRef = useRef(0);
   const lastTrailRef = useRef(0);
   const rollUntilRef = useRef(0);
@@ -55,6 +56,16 @@ export default function Landing() {
       if (!frame) return;
       setSceneWidth(frame.clientWidth);
       setSceneHeight(frame.clientHeight);
+
+      if (!hasSpawnedRef.current) {
+        const spawnX = Math.max(20, frame.clientWidth * 0.5 - 32);
+        const spawnY = Math.max(36, frame.clientHeight * 0.5 - 32);
+        xRef.current = spawnX;
+        yRef.current = spawnY;
+        setPandaX(spawnX);
+        setPandaY(spawnY);
+        hasSpawnedRef.current = true;
+      }
     };
 
     updateFrameSize();
@@ -80,7 +91,7 @@ export default function Landing() {
       );
       const next = allowed[Math.floor(Math.random() * allowed.length)];
       directionRef.current = next;
-      segmentRemainingRef.current = (3 + Math.floor(Math.random() * 7)) * gridSize;
+      segmentRemainingRef.current = (1 + Math.floor(Math.random() * 4)) * gridSize;
     };
 
     const tick = (now: number) => {
@@ -254,7 +265,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <section className="relative h-full snap-start snap-always border-b border-zinc-300/50 bg-zinc-50 px-3 py-3 dark:border-white/10 dark:bg-zinc-950 md:px-5 md:py-5">
+    <section className="relative min-h-full snap-start snap-always border-b border-zinc-300/50 bg-zinc-50 px-3 py-3 dark:border-white/10 dark:bg-zinc-950 md:px-5 md:py-5">
       <div
         ref={frameRef}
         className="relative mx-auto h-[82vh] min-h-[520px] max-h-[860px] w-full max-w-[1500px] overflow-hidden rounded-2xl border border-zinc-300/60 bg-zinc-50 shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:border-white/15 dark:bg-zinc-950 dark:shadow-[0_8px_40px_rgba(0,0,0,0.35)]"
