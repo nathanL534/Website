@@ -4,7 +4,7 @@ import { Reveal } from "../magicui/reveal";
 export default function Skills() {
   return (
     <Reveal>
-    <section id="skills" className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+    <section id="skills" className="container mx-auto h-full snap-start snap-always scroll-mt-16 px-4 py-12 md:px-6 md:py-16">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-8">
