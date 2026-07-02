@@ -31,14 +31,6 @@ export const featuredProjects: Project[] = [
     tech: ["PyTorch", "torch.compile", "CUDA graphs", "Profiling"],
   },
   {
-    slug: "agentcoord",
-    name: "Agentcoord",
-    summary:
-      "File-lease coordination for fleets of parallel coding agents. Deterministic lease semantics plus trace visibility, so concurrent agents stop clobbering each other's writes.",
-    result: "Data loss cut from 68% to 0%",
-    tech: ["Agent orchestration", "Lease semantics", "Concurrency", "Tracing"],
-  },
-  {
     slug: "dojo",
     name: "Dojo",
     note: "GRPO post-training that proves the gain",

@@ -37,7 +37,6 @@ export const metadata: Metadata = {
     description:
       "Systems and verification: inference optimization, agent infrastructure, and training pipelines that prove their own results.",
   },
-  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({
