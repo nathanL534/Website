@@ -39,10 +39,11 @@ export const featuredProjects: Project[] = [
     tech: ["Agent orchestration", "Lease semantics", "Concurrency", "Tracing"],
   },
   {
-    slug: "crucible",
-    name: "Crucible",
+    slug: "dojo",
+    name: "Dojo",
+    note: "GRPO post-training that proves the gain",
     summary:
-      "Modal-based GRPO teacher trainer, built as a Fireworks replacement. Full train → adapter → held-out-eval pipeline, deterministic and reproducible end-to-end.",
+      "A Modal-based GRPO teacher-trainer — a self-hosted Fireworks replacement for RL post-training. Runs the full train → adapter → held-out-eval loop, deterministic and reproducible end-to-end, so every reported gain is measured on data the model never saw.",
     result: "+0.014 held-out eval delta on Qwen3-4B (temp 1.1, G=8)",
     tech: ["Modal", "GRPO", "Adapters", "Qwen3-4B", "Evals"],
   },
@@ -65,13 +66,6 @@ export const earlierProjects: Project[] = [
     tech: ["FastAPI", "React", "ChromaDB", "Docker", "Node.js", "OAuth 2.0"],
     demo: "https://www.youtube.com/watch?v=e8HGR51ijFc&feature=youtu.be",
     github: "https://github.com/nathanL534/rag_system",
-  },
-  {
-    slug: "voice-interview-ai",
-    name: "Voice Interview AI",
-    summary:
-      "Interview simulator with real-time voice feedback using OpenAI and ElevenLabs.",
-    tech: ["Next.js", "OpenAI API", "ElevenLabs", "Supabase"],
   },
   {
     slug: "neural-net-scratch",

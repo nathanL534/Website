@@ -7,6 +7,16 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
+    company: "Naive",
+    role: "Early Engineering Hire (Intern)",
+    period: "March 2026 – Present",
+    highlights: [
+      "Shipped the production container runtime hosting every customer AI agent on the platform, supporting Naive's launch to 30K user signups in month one — with multi-tenant isolation, secure credential handling, and live agent identity reloads.",
+      "Cut per-customer infrastructure cost ~67% by architecting a multi-tenant slot-pool with capacity-aware scheduling, while eliminating cold-start delay for every new user.",
+      "Shipped a video-clipping pipeline at 3× lower cost per job than a third-party vendor, using an MP4 byte-range parser to cut per-job bandwidth 75–85%, on a lease-based job queue with DB-enforced tenant concurrency."
+    ]
+  },
+  {
     company: "Computer Science Instructional Laboratory (CSIL)",
     role: "Software Engineer Intern",
     period: "June 2025 – Present",
