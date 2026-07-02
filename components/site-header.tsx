@@ -1,26 +1,37 @@
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
+const navItems = [
+  { href: "#work", label: "Work" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
+];
+
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/60 dark:bg-zinc-900/60 border-b border-black/5 dark:border-white/10">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="#" className="font-semibold text-sky-700 dark:text-sky-400">NL</Link>
-        <div className="hidden md:flex items-center gap-3">
-          <nav className="flex items-center gap-4 rounded-full bg-white/70 dark:bg-white/5 backdrop-blur px-4 py-2 text-sm text-zinc-600 dark:text-zinc-300 shadow-sm ring-1 ring-black/5 dark:ring-white/10">
-            <Link href="#about" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">About</Link>
-            <Link href="#projects" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Projects</Link>
-            <Link href="#skills" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Skills</Link>
-            <Link href="#experience" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Experience</Link>
-            <Link href="#resume" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Resume</Link>
-            <Link href="#contact" className="hover:text-sky-700 dark:hover:text-sky-400 transition-colors">Contact</Link>
+    <header className="sticky top-0 z-40 bg-white/80 dark:bg-zinc-950/80 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
+      <div className="mx-auto max-w-3xl px-6 sm:px-8 h-14 flex items-center justify-between">
+        <Link
+          href="#"
+          className="font-medium tracking-tight text-zinc-900 dark:text-zinc-100"
+        >
+          Nathan Lee
+        </Link>
+        <div className="flex items-center gap-5 sm:gap-6">
+          <nav className="flex items-center gap-4 sm:gap-6 font-mono text-xs sm:text-[0.8125rem] text-zinc-500 dark:text-zinc-400">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
           <ThemeToggle />
         </div>
-        <div className="md:hidden"><ThemeToggle /></div>
       </div>
     </header>
   );
 }
-
-

@@ -1,68 +1,88 @@
 export type Project = {
   slug: string;
   name: string;
-  description: string;
+  summary: string;
+  /** Verified, measurable outcome. Keep numbers exact. */
+  result?: string;
+  /** Short annotation, e.g. a placing or context. */
+  note?: string;
   tech: string[];
-  image: string;
   demo?: string;
   github?: string;
 };
 
-export const projects: Project[] = [
+export const featuredProjects: Project[] = [
+  {
+    slug: "librarian",
+    name: "librarian",
+    summary:
+      "Infrastructure for infrastructure: a personal-context MCP server that gives AI agents relevant personal context on demand, instead of re-feeding the same documents over and over. Vector recall with a 4-factor re-rank, running as a warm local daemon that synthesizes context independently. The code is public; the personal corpus stays private (gitignored) — it doesn't ship your data.",
+    result: "$0 embedding cost — local bge-small-en-v1.5 with sqlite-vec",
+    note: "Currently building",
+    tech: ["MCP", "sqlite-vec", "bge-small-en-v1.5", "Vector search"],
+    github: "https://github.com/nathanL534/librarian",
+  },
+  {
+    slug: "miso",
+    name: "Miso",
+    summary:
+      "Inference optimizer. Profiled the open-source TTS model MisoTTS end-to-end, traced the bottleneck to the decoder, and applied torch.compile with CUDA graphs. Caught a silent eval-failure bug along the way and independently re-verified the win against it.",
+    result: "4.10x speedup on an A100 — RTF 4.04 → 0.985, under real-time",
+    tech: ["PyTorch", "torch.compile", "CUDA graphs", "Profiling"],
+  },
+  {
+    slug: "agentcoord",
+    name: "Agentcoord",
+    summary:
+      "File-lease coordination for fleets of parallel coding agents. Deterministic lease semantics plus trace visibility, so concurrent agents stop clobbering each other's writes.",
+    result: "Data loss cut from 68% to 0%",
+    tech: ["Agent orchestration", "Lease semantics", "Concurrency", "Tracing"],
+  },
+  {
+    slug: "crucible",
+    name: "Crucible",
+    summary:
+      "Modal-based GRPO teacher trainer, built as a Fireworks replacement. Full train → adapter → held-out-eval pipeline, deterministic and reproducible end-to-end.",
+    result: "+0.014 held-out eval delta on Qwen3-4B (temp 1.1, G=8)",
+    tech: ["Modal", "GRPO", "Adapters", "Qwen3-4B", "Evals"],
+  },
+  {
+    slug: "slipstream",
+    name: "Slipstream",
+    summary:
+      "Agent trace capture, scoring, and replay — inspect what an agent actually did, score it, and run it back.",
+    note: "3rd place — YC Browser Use hackathon",
+    tech: ["Agent traces", "Evals", "Replay"],
+  },
+];
+
+export const earlierProjects: Project[] = [
   {
     slug: "voice-interview-ai",
-    name: "Voice Interview AI Chatbot",
-    description: "AI-powered interview simulator with real-time voice feedback using OpenAI and ElevenLabs. Provides instant analysis of responses and coaching tips.",
-    tech: ["Next.js", "OpenAI API", "ElevenLabs", "Supabase", "Real-time AI"],
-    image: "/project-voice-ai.jpg",
-    demo: "https://example.com",
-    github: "https://github.com/yourusername/voice-interview-ai"
+    name: "Voice Interview AI",
+    summary:
+      "Interview simulator with real-time voice feedback using OpenAI and ElevenLabs.",
+    tech: ["Next.js", "OpenAI API", "ElevenLabs", "Supabase"],
   },
   {
     slug: "neural-net-scratch",
     name: "Neural Net from Scratch",
-    description: "Java-based Multi-Layer Perceptron implementation with forward/backpropagation, gradient descent, and custom training algorithms.",
-    tech: ["Java", "Machine Learning", "Neural Networks", "Gradient Descent", "Backpropagation"],
-    image: "/project-neural-net.jpg",
-    demo: "https://example.com",
-    github: "https://github.com/yourusername/neural-net-scratch"
+    summary:
+      "Java multi-layer perceptron with forward/backpropagation and gradient descent, no frameworks.",
+    tech: ["Java", "Backpropagation", "Gradient descent"],
   },
   {
     slug: "nyt-letterboxed-solver",
     name: "NYT LetterBoxed Solver",
-    description: "Efficient puzzle solver for the New York Times LetterBoxed game using BFS algorithm and optimized word search strategies.",
-    tech: ["Java", "BFS Algorithm", "Puzzle Solving", "Word Search", "Optimization"],
-    image: "/project-letterboxed.jpg",
-    demo: "https://example.com",
-    github: "https://github.com/yourusername/letterboxed-solver"
+    summary:
+      "BFS-based solver for the New York Times LetterBoxed puzzle with optimized word search.",
+    tech: ["Java", "BFS"],
   },
   {
     slug: "automated-trading",
-    name: "Automated Stock Trading & Notification System",
-    description: "Quantitative trading platform with FastAPI backend, Alpaca API integration, Slack notifications, and algorithmic trading models.",
-    tech: ["FastAPI", "Alpaca API", "Slack API", "Trading Algorithms", "Quantitative Models"],
-    image: "/project-trading.jpg",
-    demo: "https://example.com",
-    github: "https://github.com/yourusername/automated-trading"
+    name: "Automated Trading & Notifications",
+    summary:
+      "Quantitative trading system with a FastAPI backend, Alpaca API integration, and Slack alerts.",
+    tech: ["FastAPI", "Alpaca API", "Slack API"],
   },
-  {
-    slug: "portfolio",
-    name: "Developer Portfolio",
-    description: "Personal portfolio with animations and responsive design.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    image: "/project-portfolio.jpg",
-    demo: "https://example.com",
-    github: "https://github.com/yourusername/portfolio"
-  },
-  {
-    slug: "saas",
-    name: "SaaS Dashboard",
-    description: "Interactive analytics dashboard with charts and auth.",
-    tech: ["Next.js", "Prisma", "Postgres"],
-    image: "/project-saas.jpg",
-    demo: "https://example.com",
-    github: "https://github.com/yourusername/portfolio"
-  }
 ];
-
-

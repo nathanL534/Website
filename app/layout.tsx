@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
-import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -11,25 +10,32 @@ const inter = Inter({
   display: "swap",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://nathan-lee-534.vercel.app"),
   title: {
-    default: "Nathaniel Lee — Portfolio",
-    template: "%s — Nathaniel Lee",
+    default: "Nathan Lee — Software Engineer",
+    template: "%s — Nathan Lee",
   },
-  description: "Full‑stack developer portfolio: projects, experience, and contact.",
+  description:
+    "Systems and verification: inference optimization, agent infrastructure, and training pipelines that prove their own results.",
   openGraph: {
     type: "website",
     url: "/",
-    title: "Nathaniel Lee — Portfolio",
-    description: "Full‑stack developer portfolio: projects, experience, and contact.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Portfolio" }],
+    title: "Nathan Lee — Software Engineer",
+    description:
+      "Systems and verification: inference optimization, agent infrastructure, and training pipelines that prove their own results.",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Nathaniel Lee — Portfolio",
-    description: "Full‑stack developer portfolio: projects, experience, and contact.",
-    images: ["/og.png"],
+    card: "summary",
+    title: "Nathan Lee — Software Engineer",
+    description:
+      "Systems and verification: inference optimization, agent infrastructure, and training pipelines that prove their own results.",
   },
   icons: { icon: "/favicon.ico" },
 };
@@ -41,9 +47,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased min-h-screen`}>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100`}
+      >
         <ThemeProvider>
-          <ScrollProgress />
           <SiteHeader />
           {children}
         </ThemeProvider>

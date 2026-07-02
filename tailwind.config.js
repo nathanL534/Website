@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+  			mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -51,22 +55,6 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		},
-  		keyframes: {
-  			gradientMove: {
-  				'0%': {
-  					backgroundPosition: '0% 50%'
-  				},
-  				'50%': {
-  					backgroundPosition: '100% 50%'
-  				},
-  				'100%': {
-  					backgroundPosition: '0% 50%'
-  				}
-  			}
-  		},
-  		animation: {
-  			gradientMove: 'gradientMove 6s linear infinite'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
