@@ -58,6 +58,15 @@ export const featuredProjects: Project[] = [
 
 export const earlierProjects: Project[] = [
   {
+    slug: "nathan-brain",
+    name: "Nathan Brain (ExtraContext)",
+    summary:
+      "Autonomous self-editing AI system where agent workers can modify, test, and improve the codebase, built on a production multi-tenant RAG platform with PDF ingestion, semantic search, and Google Calendar integration.",
+    tech: ["FastAPI", "React", "ChromaDB", "Docker", "Node.js", "OAuth 2.0"],
+    demo: "https://www.youtube.com/watch?v=e8HGR51ijFc&feature=youtu.be",
+    github: "https://github.com/nathanL534/rag_system",
+  },
+  {
     slug: "voice-interview-ai",
     name: "Voice Interview AI",
     summary:
@@ -70,6 +79,8 @@ export const earlierProjects: Project[] = [
     summary:
       "Java multi-layer perceptron with forward/backpropagation and gradient descent, no frameworks.",
     tech: ["Java", "Backpropagation", "Gradient descent"],
+    github:
+      "https://github.com/nathanL534/java_projects/tree/main/Multilayer%20Perceptron",
   },
   {
     slug: "nyt-letterboxed-solver",
@@ -77,6 +88,8 @@ export const earlierProjects: Project[] = [
     summary:
       "BFS-based solver for the New York Times LetterBoxed puzzle with optimized word search.",
     tech: ["Java", "BFS"],
+    github:
+      "https://github.com/nathanL534/java_projects/tree/main/LetterBoxed%20copy",
   },
   {
     slug: "automated-trading",
@@ -84,5 +97,13 @@ export const earlierProjects: Project[] = [
     summary:
       "Quantitative trading system with a FastAPI backend, Alpaca API integration, and Slack alerts.",
     tech: ["FastAPI", "Alpaca API", "Slack API"],
+    github: "https://github.com/nathanL534/slack_bot",
+  },
+  {
+    slug: "portfolio",
+    name: "Developer Portfolio",
+    summary: "Personal portfolio with animations and responsive design.",
+    tech: ["Next.js", "TypeScript", "Tailwind"],
+    github: "https://github.com/nathanL534/Website",
   },
 ];

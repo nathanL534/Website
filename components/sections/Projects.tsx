@@ -1,6 +1,34 @@
 import Link from "next/link";
 import { featuredProjects, earlierProjects, type Project } from "@/data/projects";
 
+function ProjectLinks({ project }: { project: Project }) {
+  if (!project.github && !project.demo) return null;
+  return (
+    <>
+      {project.github && (
+        <Link
+          href={project.github}
+          target="_blank"
+          rel="noreferrer"
+          className="font-mono text-xs text-zinc-600 dark:text-zinc-400 underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700 hover:text-orange-700 dark:hover:text-orange-400 hover:decoration-current transition-colors"
+        >
+          Code ↗
+        </Link>
+      )}
+      {project.demo && (
+        <Link
+          href={project.demo}
+          target="_blank"
+          rel="noreferrer"
+          className="font-mono text-xs text-zinc-600 dark:text-zinc-400 underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700 hover:text-orange-700 dark:hover:text-orange-400 hover:decoration-current transition-colors"
+        >
+          Demo ↗
+        </Link>
+      )}
+    </>
+  );
+}
+
 function ProjectEntry({ project }: { project: Project }) {
   return (
     <article className="py-10 border-t border-zinc-200 dark:border-zinc-800 sm:grid sm:grid-cols-[11rem_1fr] sm:gap-8">
@@ -33,26 +61,7 @@ function ProjectEntry({ project }: { project: Project }) {
           <p className="font-mono text-xs text-zinc-400 dark:text-zinc-500">
             {project.tech.join(" · ")}
           </p>
-          {project.github && (
-            <Link
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="font-mono text-xs text-zinc-600 dark:text-zinc-400 underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700 hover:text-orange-700 dark:hover:text-orange-400 hover:decoration-current transition-colors"
-            >
-              Code ↗
-            </Link>
-          )}
-          {project.demo && (
-            <Link
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-              className="font-mono text-xs text-zinc-600 dark:text-zinc-400 underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700 hover:text-orange-700 dark:hover:text-orange-400 hover:decoration-current transition-colors"
-            >
-              Demo ↗
-            </Link>
-          )}
+          <ProjectLinks project={project} />
         </div>
       </div>
     </article>
@@ -73,10 +82,10 @@ export default function Projects() {
       </div>
 
       <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 mt-16 mb-6">
-        Earlier
+        More projects
       </h2>
 
-      <ul className="space-y-4 border-t border-zinc-200 dark:border-zinc-800 pt-6">
+      <ul className="space-y-5 border-t border-zinc-200 dark:border-zinc-800 pt-6">
         {earlierProjects.map((project) => (
           <li
             key={project.slug}
@@ -85,9 +94,14 @@ export default function Projects() {
             <h3 className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
               {project.name}
             </h3>
-            <p className="mt-0.5 sm:mt-0 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-              {project.summary}
-            </p>
+            <div className="mt-0.5 sm:mt-0">
+              <p className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+                {project.summary}
+              </p>
+              <div className="mt-1 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <ProjectLinks project={project} />
+              </div>
+            </div>
           </li>
         ))}
       </ul>
