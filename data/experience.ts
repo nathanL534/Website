@@ -7,13 +7,14 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    company: "Naive",
-    role: "Early Engineering Hire (Intern)",
+    company: "Naive (YC X25, $28.5M Series A)",
+    role: "Early Engineering Hire",
     period: "March 2026 – Present",
     highlights: [
-      "Shipped the production container runtime hosting every customer AI agent on the platform, supporting Naive's launch to 30K user signups in month one — with multi-tenant isolation, secure credential handling, and live agent identity reloads.",
-      "Cut per-customer infrastructure cost ~67% by architecting a multi-tenant slot-pool with capacity-aware scheduling, while eliminating cold-start delay for every new user.",
-      "Shipped a video-clipping pipeline at 3× lower cost per job than a third-party vendor, using an MP4 byte-range parser to cut per-job bandwidth 75–85%, on a lease-based job queue with DB-enforced tenant concurrency."
+      "Shipped the production container runtime for all customer AI agents (30K users at launch), securely isolating each customer's agents and credentials, with live identity reloads that update permissions without a restart.",
+      "Cut billed virtual machine time over 90% per agent session by routing an average of 83% of agent commands into an in-process isolate and creating VMs only on demand.",
+      "Cut per-customer infrastructure cost 67% by packing three isolated customer containers onto each VM instead of running one VM per customer.",
+      "Shipped a video-clipping pipeline at 3× lower cost per job than a third-party vendor by writing an MP4 byte-range parser that cut per-job bandwidth 75–85%, running on a lease-based job queue with database-enforced tenant concurrency."
     ]
   },
   {
@@ -21,18 +22,18 @@ export const experience: ExperienceItem[] = [
     role: "Software Engineer Intern",
     period: "June 2025 – Present",
     highlights: [
-      "Built an AI-powered documentation review platform with Python, FastAPI, Trello, and Slack used across 7 teams and 50+ users.",
-      "Integrated Ollama-hosted LLaMA models to generate actionable documentation feedback and reduce manual review cycles.",
-      "Shipped a real-time Next.js interface for board/card selection and API-triggered reviews to streamline team workflows."
+      "Built an AI documentation platform (Python, FastAPI, Slack/Trello APIs) that assembles a task's documentation from tickets and docs scattered across tools, adopted by 7 teams and 50 active users.",
+      "Cut Trello card verification time 40% by integrating gpt-4o-mini (migrated from self-hosted LLaMA 3 on Ollama) with a React/Next.js frontend.",
+      "Cut follow-up questions 75% by building a hybrid retrieval layer over related documents, combining vector ranking with 2-hop graph traversal."
     ]
   },
   {
     company: "UChicago APEX Labs",
     role: "Research Assistant",
-    period: "December 2025 – Present",
+    period: "December 2025 – March 2026",
     highlights: [
-      "Improved OCR extraction quality with an automated two-pass correction and confidence-scoring pipeline, reaching 96.0% of 1,410 pages at cosine similarity >= 0.99 and 83.53% agreement across 45,838 reviewed errors.",
-      "Fine-tuned a style-transfer model from neutral-to-source text pairs, deployed Azure AI Search with semantic embeddings, and built grounded generation plus text-to-speech output for source-based responses."
+      "Built an automated two-pass OCR correction pipeline for a scanned-document archive, replacing page-by-page manual proofreading; 96% of 1,410 pages reached ≥0.99 similarity to the human reference.",
+      "Designed a confidence-scoring pass that flags uncertain pages for human review, validated at 84% agreement between independent reviewers across 46K flagged errors."
     ]
   },
   {

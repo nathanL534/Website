@@ -40,12 +40,22 @@ export const featuredProjects: Project[] = [
     tech: ["Modal", "GRPO", "Adapters", "Qwen3-4B", "Evals"],
   },
   {
+    slug: "qwen3-bfcl",
+    name: "Qwen3-8B LoRA + BFCL eval harness",
+    note: "Every number traced to the model that produced it",
+    summary:
+      "Fine-tuned Qwen3-8B with LoRA on 270 curated function-calling examples, then built an eval harness from scratch for the Berkeley Function Calling benchmark. The harness verifies that every reported number came from the model that actually produced it, not a silently substituted one.",
+    result: "332 base-versus-adapter calls scored across three test splits",
+    tech: ["Qwen3-8B", "LoRA", "BFCL", "Evals"],
+  },
+  {
     slug: "slipstream",
     name: "Slipstream",
     summary:
-      "Agent trace capture, scoring, and replay — inspect what an agent actually did, score it, and run it back.",
-    note: "3rd place — YC Browser Use hackathon",
-    tech: ["Agent traces", "Evals", "Replay"],
+      "Cross-user action memory for browser agents: a shared memory that lets agents reuse paths other agents already solved. Every run is captured as a trace, paths are scored, and only the best path per task is kept for reuse, letting a repeat task retrieve a known-good path instead of re-exploring.",
+    result: "Cut average task time 49% and steps up to 44% on repeat runs",
+    note: "3rd place + Best Use of Real-Time Data, YC Browser Use hackathon",
+    tech: ["Python", "Vector search", "Agent traces"],
   },
 ];
 
