@@ -9,7 +9,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Naive (YC X25, $28.5M Series A)",
     role: "Software Engineer",
-    period: "March 2026 – Present",
+    period: "March 2026 – August 2026",
     highlights: [
       "Deployed the production container runtime for all customer AI agents (30K users at launch) with the founding engineering team, securely isolating each customer's agents and credentials without downtime.",
       "Eliminated over 90% of billed VM time per session by routing 83% of agent commands into a lightweight sandbox and creating VMs only on demand.",
