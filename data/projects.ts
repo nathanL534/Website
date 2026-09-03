@@ -40,14 +40,6 @@ export const featuredProjects: Project[] = [
     tech: ["Modal", "GRPO", "Adapters", "Qwen3-4B", "Evals"],
   },
   {
-    slug: "qwen3-bfcl",
-    name: "Qwen3-8B LoRA + BFCL eval harness",
-    summary:
-      "LoRA fine-tune of Qwen3-8B on 270 function-calling examples, with a from-scratch eval harness for the Berkeley Function Calling benchmark. Caught a serving bug where the base model loaded instead of the adapter — reported +0.0% and I traced it back.",
-    result: "332 base-versus-adapter calls scored across three test splits",
-    tech: ["Qwen3-8B", "LoRA", "BFCL", "Evals"],
-  },
-  {
     slug: "slipstream",
     name: "Slipstream",
     summary:
