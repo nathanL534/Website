@@ -42,9 +42,9 @@ export const experience: ExperienceItem[] = [
     role: "Software Engineer Intern",
     period: "July 2025 – September 2025",
     highlights: [
-      "Designed and deployed a Reddit finance intelligence agent using FastAPI, PRAW, and LLaMA models, analyzing 2,500+ posts monthly.",
-      "Implemented BFS-style comment traversal with heuristic scoring to surface high-signal personal finance discussions.",
-      "Rebuilt key parts of the company web app with Next.js and AWS services to improve UX and deployment scalability."
+      "Built a Reddit finance agent (FastAPI, PRAW, LLaMA) that analyzed 2,500+ posts monthly for personal finance signals.",
+      "Wrote BFS comment traversal with heuristic scoring to rank discussion threads by relevance.",
+      "Rebuilt parts of the web app in Next.js with AWS for faster deploys."
     ]
   },
   {
@@ -52,9 +52,8 @@ export const experience: ExperienceItem[] = [
     role: "Software Engineer Intern",
     period: "June 2023 – September 2023",
     highlights: [
-      "Implemented federated search in React to unify restaurant and sports content into a single ranked results flow.",
-      "Built reusable UI components for navigation, tabs, and settings pages using Sass/CSS with a strong focus on consistency.",
-      "Collaborated with product and design to refine interaction details, improve discoverability, and reduce user friction."
+      "Built federated search in React that combined restaurant and sports content into one ranked feed.",
+      "Built shared navigation, tabs, and settings components with Sass/CSS."
     ]
   }
 ];

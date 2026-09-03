@@ -27,12 +27,11 @@ export default function About() {
       <div className="mt-6 sm:grid sm:grid-cols-[1fr_11rem] sm:gap-10 items-start">
         <div>
           <p className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
-            I build practical AI systems — inference performance, agent
-            infrastructure, and training pipelines. The through-line is
-            verification: I don&apos;t trust a result until the ways it could
-            be lying have been ruled out. Profilers over vibes, held-out evals
-            over demos, and re-checking the win after finding the bug that
-            could have faked it.
+            I work on inference, agent infrastructure, and training pipelines.
+            Most of what I care about is verification — I don&apos;t trust a
+            result until I&apos;ve checked the ways it could be wrong. Profile
+            before trusting a speedup, held-out evals over demos, and if
+            something could have faked the win, re-check.
           </p>
 
           <p className="mt-4 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">

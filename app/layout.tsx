@@ -23,19 +23,19 @@ export const metadata: Metadata = {
     template: "%s — Nathan Lee",
   },
   description:
-    "Systems and verification: inference optimization, agent infrastructure, and training pipelines that prove their own results.",
+    "Nathan Lee — inference, agent infrastructure, and training pipelines.",
   openGraph: {
     type: "website",
     url: "/",
     title: "Nathan Lee — Software Engineer",
     description:
-      "Systems and verification: inference optimization, agent infrastructure, and training pipelines that prove their own results.",
+      "Nathan Lee — inference, agent infrastructure, and training pipelines.",
   },
   twitter: {
     card: "summary",
     title: "Nathan Lee — Software Engineer",
     description:
-      "Systems and verification: inference optimization, agent infrastructure, and training pipelines that prove their own results.",
+      "Nathan Lee — inference, agent infrastructure, and training pipelines.",
   },
 };
 
