@@ -8,12 +8,13 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     company: "Naive (YC X25, $28.5M Series A)",
-    role: "Early Engineering Hire",
+    role: "Software Engineer",
     period: "March 2026 – Present",
     highlights: [
-      "Shipped the production container runtime for all customer AI agents (30K users at launch), securely isolating each customer's agents and credentials, with live identity reloads that update permissions without a restart.",
-      "Cut billed virtual machine time over 90% per agent session by routing an average of 83% of agent commands into an in-process isolate and creating VMs only on demand.",
+      "Deployed the production container runtime for all customer AI agents (30K users at launch) with the founding engineering team, securely isolating each customer's agents and credentials without downtime.",
+      "Eliminated over 90% of billed VM time per session by routing 83% of agent commands into a lightweight sandbox and creating VMs only on demand.",
       "Cut per-customer infrastructure cost 67% by packing three isolated customer containers onto each VM instead of running one VM per customer.",
+      "Cut inference cost 22% and input tokens 40% on the SWE-bench Pro coding benchmark by routing file exploration to a cheap scout model and reserving the frontier model for the fix, with no accuracy loss.",
       "Shipped a video-clipping pipeline at 3× lower cost per job than a third-party vendor by writing an MP4 byte-range parser that cut per-job bandwidth 75–85%, running on a lease-based job queue with database-enforced tenant concurrency."
     ]
   },

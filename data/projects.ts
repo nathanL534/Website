@@ -27,7 +27,7 @@ export const featuredProjects: Project[] = [
     name: "Miso",
     summary:
       "Inference optimizer. Profiled the open-source TTS model MisoTTS end-to-end, traced the bottleneck to the decoder, and applied torch.compile with CUDA graphs. Caught a silent eval-failure bug along the way and independently re-verified the win against it.",
-    result: "4.10x speedup on an A100 — RTF 4.04 → 0.985, under real-time",
+    result: "4.10x speedup on an A100 — RTF 4.04 → 0.985, real-time streaming speed",
     tech: ["PyTorch", "torch.compile", "CUDA graphs", "Profiling"],
   },
   {
