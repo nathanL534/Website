@@ -27,11 +27,9 @@ export default function About() {
       <div className="mt-6 sm:grid sm:grid-cols-[1fr_11rem] sm:gap-10 items-start">
         <div>
           <p className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
-            I work on inference, agent infrastructure, and training pipelines.
-            Most of what I care about is verification — I don&apos;t trust a
-            result until I&apos;ve checked the ways it could be wrong. Profile
-            before trusting a speedup, held-out evals over demos, and if
-            something could have faked the win, re-check.
+            I work on inference, agent infrastructure, and training. I spend a
+            lot of time making sure results are actually real — if there&apos;s
+            a way a number could be lying, I want to find it before I ship it.
           </p>
 
           <p className="mt-4 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
